@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import { Button, Form } from "react-bootstrap";
 import { Web3Storage } from 'web3.storage/dist/bundle.esm.min.js'
 
 
-export const FileUploader = ({ setCids, setIpfsError, setSendingState }) => {
-
-    const [files, setFile] = useState([]);
+export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
+    
+    const [files, setFile] = useState([]); 
 
     const onInputChange = (event) => {
-        setFile(event.target.files)
+        setFile(event.target.files) 
     }
 
     const onSubmit = async (event) => {
@@ -32,12 +32,12 @@ export const FileUploader = ({ setCids, setIpfsError, setSendingState }) => {
 
     return (
         <div>
-            <Form method="post" action="#" id="#" onSubmit={onSubmit}>
+            <Form method="post" action="#" id="#"  onSubmit={onSubmit}>
                 <Form.Group className="mb-3 form-group files">
                     <input type="file"
                         onChange={onInputChange}
                         className="form-control"
-                        multiple />
+                        multiple/>
                 </Form.Group>
 
                 <Button variant="dark" type="submit">
